@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko"><head><base href="https://www.aeterni.co.kr/"><meta name="robots" content="noindex,nofollow,noarchive">
+<!doctype html><html lang="ko"><head><meta name="robots" content="noindex,nofollow,noarchive"><base href="https://www.aeterni.co.kr/">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>카나리아의 날갯짓 | 조영서 이지호 유다인 | 도서출판 에테르니</title>
 <meta name="description" content="의대생 세 사람 조영서, 이지호, 유다인이 입시와 완벽주의, 자기 속도를 기록한 청춘 에세이 『카나리아의 날갯짓』. 시험 불안 극복법과 독자의 편지, 북토크 안내.">
@@ -253,10 +253,10 @@ header nav .ng{border-top:none;padding:2px 0}
 @media (max-width:767px){.rv{padding:40px 22px}.rv h2{font-size:19px}.rv .rv-ways li{flex-direction:column;align-items:flex-start;gap:8px}}
 </style>
 <style id="scene-exp">
-.sc-stage{display:none}
+.sc-stage{display:none}.sc-text{display:none}
 html.sc .three{width:100vw;margin-left:calc(50% - 50vw);background:#16130f;color:#f3eee4;padding:0;margin-top:72px;margin-bottom:72px}
 html.sc .sc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);max-width:1240px;margin:0 auto;padding:0 40px}
-html.sc .sc-steps{padding:0 40px 0 0}
+html.sc .sc-steps{padding:0 40px 0 0;grid-column:1;grid-row:1}html.sc .sc-stage{grid-column:2;grid-row:1}
 html.sc .three .sec-title{min-height:100vh;display:flex;flex-direction:column;justify-content:center;border:0;margin:0;padding:0}
 html.sc .three .sec-title h2{font-family:'MaruBuri',serif;font-size:40px;line-height:1.35;font-weight:400;color:#f3eee4;margin:0}
 html.sc .sc-kick{font-size:15px;line-height:1.8;color:#b9b0a1;margin-top:22px;max-width:30em}
@@ -275,17 +275,27 @@ html.sc .sc-frame img{position:absolute;inset:0;width:100%;height:100%;object-fi
 html.sc .sc-frame img.on{opacity:1;transform:scale(1)}
 html.sc .sc-cap{position:absolute;left:0;bottom:-34px;font-size:13px;color:#8f8676}
 @media (max-width:860px){
- html.sc .sc-grid{display:block;padding:0}
- html.sc .sc-stage{height:52vh;z-index:2;background:#16130f;padding:16px 16px 0;align-items:flex-end}
- html.sc .sc-frame{width:100%;height:100%;aspect-ratio:auto}
- html.sc .sc-cap{display:none}
- html.sc .sc-steps{padding:0 24px;position:relative;z-index:1}
- html.sc .three .sec-title,html.sc .three .rd{min-height:100vh;justify-content:flex-end;padding:0 0 6vh}
- html.sc .three .sec-title h2{font-size:28px}
- html.sc .three .rd b{font-size:22px}
- html.sc .three .rd .rq{font-size:17px}
- html.sc .sc-grid{display:flex;flex-direction:column}
+ html.sc .sc-grid{display:block;padding:0;position:relative}
+ html.sc .sc-stage{position:sticky;top:0;height:100vh;height:100svh;z-index:0;background:#16130f;padding:14px 14px 0;flex-direction:column;align-items:stretch;justify-content:flex-start}
+ html.sc .sc-text{display:block;padding:26px 10px 0;transition:opacity .45s ease}
+ html.sc .sc-text.fade{opacity:0}
+ html.sc .sc-text h2{font-family:'MaruBuri',serif;font-weight:400;font-size:26px;line-height:1.35;color:#f3eee4;margin:0}
+ html.sc .sc-text .axis,html.sc .sc-text img{display:none}
+ html.sc .sc-text b{font-family:'MaruBuri',serif;font-weight:400;font-size:21px;color:#f3eee4;display:block;margin-bottom:12px}
+ html.sc .sc-text p{color:#cfc7b8;font-size:14.5px;line-height:1.75;margin:0 0 12px}
+ html.sc .sc-text .sc-kick{margin-top:14px}
+ html.sc .sc-text .rq{font-family:'MaruBuri',serif;font-size:16.5px;line-height:1.65;color:#f3eee4;border-left:1px solid #6d6556;padding-left:14px}
+ html.sc .sc-text .rq span{color:#8f8676!important}
+ html.sc .sc-frame{width:100%;aspect-ratio:1;height:auto}
+ html.sc .sc-steps{position:relative;z-index:1;padding:0 24px;margin-top:-100vh;margin-top:-100svh}
+ html.sc .three .sec-title,html.sc .three .rd,html.sc .three .sec-title.on,html.sc .three .rd.on{min-height:100vh;min-height:100svh;padding:0;opacity:0}
+ html.sc .three .sec-title h2{font-size:27px}
+ html.sc .sc-kick{font-size:14.5px;margin-top:14px}
+ html.sc .three .rd b{font-size:21px;margin-bottom:12px}
+ html.sc .three .rd p{font-size:14.5px;line-height:1.75;margin-bottom:12px}
+ html.sc .three .rd .rq{font-size:16.5px;line-height:1.65;padding-left:14px}
 }
+@media (max-width:860px) and (max-height:720px){html.sc .sc-frame{width:78%}}
 @media (prefers-reduced-motion:reduce){html.sc .sc-frame img{transition:opacity .3s}html.sc .sc-frame img,html.sc .sc-frame img.on{transform:none}}
 </style>
 </head><body><a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
@@ -542,10 +552,11 @@ var items=[{el:head,img:first,cap:'수능 날 새벽'}];
 steps.appendChild(head);
 rds.forEach(function(r){var im=r.querySelector('img');steps.appendChild(r);if(im){var c=im.cloneNode();c.removeAttribute('class');c.alt='';c.loading='eager';frame.appendChild(c);items.push({el:r,img:c,cap:im.alt});}});
 grid.appendChild(steps);grid.appendChild(stage);t.appendChild(grid);
-if(innerWidth<=860){grid.insertBefore(stage,steps);}
-function act(i){items.forEach(function(o,j){o.el.classList.toggle('on',i===j);o.img.classList.toggle('on',i===j)});cap.textContent=items[i].cap;}
+grid.insertBefore(stage,steps);
+var txt=document.createElement('div');txt.className='sc-text';txt.setAttribute('aria-hidden','true');stage.appendChild(txt);var cur=-1;
+function act(i){if(i===cur)return;cur=i;items.forEach(function(o,j){o.el.classList.toggle('on',i===j);o.img.classList.toggle('on',i===j)});cap.textContent=items[i].cap;txt.classList.add('fade');setTimeout(function(){txt.innerHTML=items[i].el.innerHTML;txt.classList.remove('fade')},cur===0&&!txt.innerHTML?0:280);}
 act(0);
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){items.forEach(function(o,i){if(o.el===e.target)act(i)})}})},{rootMargin:innerWidth<=860?'-75% 0px -10% 0px':'-45% 0px -45% 0px'});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){items.forEach(function(o,i){if(o.el===e.target)act(i)})}})},{rootMargin:innerWidth<=860?'-50% 0px -49% 0px':'-45% 0px -45% 0px'});
 items.forEach(function(o){io.observe(o.el)});
 })();
 </script>
