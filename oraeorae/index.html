@@ -79,12 +79,91 @@ html.thon .th-band a{color:#FAF3E2}
 }
 @media (prefers-reduced-motion:reduce){.th-marquee{animation:none}}
 </style>
+<style id="draft-exp">
+.scw{display:none}
+html.thon .scw{display:block;position:relative;height:var(--h)}
+html.thon .story,html.thon .pile,html.thon .compare{display:none}
+html.thon .th-marquee,html.thon .th .l1{display:none}
+.scs{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#1C1B19;color:#FAF3E2}
+.sca{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(calc(1.08 - .08 * var(--p,0)));transform-origin:50% 60%;will-change:transform}
+.scp{position:absolute;opacity:var(--po,0);transform:translateY(calc((1 - var(--po,0)) * 24px));font-family:'MaruBuri',serif}
+.scp .lab{font-size:13px;letter-spacing:.1em;opacity:.8}
+.scp .h{font-family:'Song Myung',serif;font-size:clamp(22px,2.4vw,32px);line-height:1.35;margin-bottom:14px}
+.scp .sm{font-size:15px;line-height:1.75;margin-top:14px;opacity:.9}
+.panel-bg{}
+.scp-sign{left:45%;top:39%;width:50%;text-align:center;opacity:1;transform:none}
+.scp-sign .mast{font-family:'Song Myung',serif;font-size:clamp(30px,4.6vw,72px);line-height:1.05;letter-spacing:-.045em;color:#FFE9B8;opacity:var(--tl,0);text-shadow:0 0 calc(18px * var(--tl,0)) rgba(255,170,60,.75)}
+.scp-sign .mk,.scp-sign .l1{font-size:14px;color:#FAF3E2;opacity:var(--tl,0)}
+.scp-sign .l1{font-family:'Song Myung',serif;font-size:clamp(15px,1.4vw,19px);margin-top:calc(10vh);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.scw[data-fx=light] .sca{filter:brightness(calc(.45 + .55 * var(--lp,0))) saturate(calc(.6 + .4 * var(--lp,0)))}
+.scp-board{right:4%;top:7%;width:min(520px,42%);background:rgba(18,15,12,.9);padding:22px 26px}
+.flap{list-style:none;margin-top:10px}
+.flap li{display:flex;gap:14px;align-items:baseline;font-size:16px;line-height:2;border-bottom:1px solid rgba(255,255,255,.08);transform-origin:50% 0;transform:rotateX(90deg);opacity:0;transition:transform .35s ease,opacity .35s}
+.flap li.on{transform:none;opacity:1}
+.flap b{font-family:Seg;font-weight:400;color:var(--stamp);font-size:13px;min-width:46px}
+.scs.lt{color:var(--ink)}
+.scp-top{left:50%;top:5%;transform:translate(-50%,calc((1 - var(--po,0)) * 24px));width:min(1100px,92%);background:rgba(243,227,181,.94);padding:22px 28px}
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.doors div{padding:12px 14px;outline:1px solid rgba(28,27,25,.15);opacity:.35;transition:opacity .4s,outline-color .4s}
+.doors div.on{opacity:1}
+.doors div:last-child.on{outline:2px solid var(--red)}
+.doors b{display:block;font-family:Seg;font-weight:400;color:var(--red);font-size:18px}
+.doors .t{display:block;font-family:'Song Myung',serif;font-size:19px;margin:4px 0}
+.doors span{display:block;font-size:14px;color:var(--soft)}
+.scp-right{right:4%;top:7%;width:min(500px,40%);background:rgba(250,243,226,.95);color:var(--ink);padding:22px 26px}
+.scp-left{left:4%;top:7%;width:min(480px,40%);background:rgba(243,227,181,.95);color:var(--ink);padding:22px 26px}
+.paper p{margin-top:14px;font-size:15px;line-height:1.7;clip-path:inset(0 100% 0 0);transition:clip-path .9s ease}
+.paper p.on{clip-path:inset(0 0 0 0)}
+.paper b{display:block}.paper em{display:block;font-style:normal;font-family:'Song Myung',serif;color:var(--pen);font-size:17px}
+.scw[data-fx=dim] .sca{filter:brightness(calc(1 - .45 * var(--p,0)))}
+.scp-screen{left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:min(640px,80%);text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.scp-strip{left:0;bottom:7%;width:100%;opacity:1;transform:none}
+.strip{display:flex;gap:18px;padding-left:6%;transform:translateX(calc(30vw - 90vw * var(--p,0)))}
+.strip figure{flex:0 0 min(34vw,460px);background:#111;padding:10px 10px 8px;outline:1px dashed rgba(255,255,255,.25)}
+.strip img{width:100%;display:block}.strip figcaption{font-size:13px;margin-top:6px;color:#D8CDBB}
+.wipe{position:relative}.wipe img{width:100%;display:block}
+.wipe .w2{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--wp,0) * 100%) 0 0)}
+.reel{padding-left:22px;font-size:16px;line-height:2}
+.reel li{opacity:.35;transition:opacity .3s,color .3s}.reel li.on{opacity:1;color:var(--red)}
+.scp-booth{left:36%;top:12%;width:min(380px,32%)}
+.env{background:var(--env);color:var(--ink);padding:20px 22px;outline:1px solid #C9B98F;font-size:15px;line-height:1.7}
+.et{font-family:'Song Myung',serif;font-size:22px}.price{font-family:Seg;color:var(--red);font-size:26px;margin:6px 0}
+.memos p{background:var(--memo);font-size:15px;padding:8px 12px;margin-top:10px;transform:rotate(calc(-1.5deg + var(--i,0) * 1deg)) translateY(calc((1 - var(--mo,0)) * 12px));opacity:var(--mo,0)}
+.scp-credits{left:0;right:0;top:0;bottom:0;opacity:1;transform:none;background:rgba(18,15,12,calc(.35 + .5 * var(--p,0)));text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.credits{position:absolute;left:0;right:0;top:100%;transform:translateY(calc(-1 * var(--cr,0) * (100vh + 100%)));}
+.credits p{font-size:18px;margin:34px 0}.credits span{display:block;font-size:12px;letter-spacing:.2em;opacity:.7;margin-bottom:4px}
+.credits .end{font-family:'Song Myung',serif;font-size:clamp(30px,4vw,56px);margin-top:70px}
+@media (max-width:820px){
+ .sca{height:50%}
+ .scs{background:#1C1B19}
+ .scs.lt{background:var(--env)}
+ .scp-board,.scp-right,.scp-left,.scp-top,.scp-booth{left:0;right:0;top:50%;width:auto;transform:translateY(calc((1 - var(--po,0)) * 24px));padding:18px 20px;max-height:50%;overflow:hidden}
+ .scp-sign{left:20%;width:76%;top:19%}
+ .scp-sign .mast{font-size:26px}
+ .scp-sign .l1{margin-top:28vh;font-size:15px}
+ .scp-sign .mk{font-size:11px}
+ .flap li{font-size:13.5px;line-height:1.75}
+ .doors{grid-template-columns:1fr;gap:8px}.doors div{padding:8px 10px}.doors .t{font-size:16px}
+ .paper p{font-size:13.5px;margin-top:8px}
+ .scp .h{font-size:20px;margin-bottom:8px}
+ .scp .sm{font-size:13.5px}
+ .scp-screen{top:72%}
+ .strip{transform:translateX(calc(10vw - 230vw * var(--p,0)))}
+ .strip figure{flex-basis:72vw}
+ .scp-strip{bottom:auto;top:55%}
+ .wipe{max-width:60%}
+ .reel{font-size:14px;line-height:1.8}
+ .memos p{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){.flap li,.paper p{transition:none}}
+</style>
 </head>
 <body>
 
 <div class="top"><span><a href="/en/" hreflang="en" lang="en">English</a></span><nav><a href="#sample">샘플 상영작</a><a href="#scenes">장면 보기</a><a href="#steps">만드는 순서</a><a href="#price">가격</a><a href="#contact">문의</a></nav></div>
 
 <main>
+<section class="scw" data-fx="light" style="--h:210vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s01.jpg" alt="" loading="eager"><div class="scp scp-sign"><p class="mk">칠순 · 팔순 · 환갑 영상 제작</p><p class="mast">오래오래 영화사</p><p class="l1">글 쓰는 아내와 영화를 전공한 남편이</p></div></div></section>
 <header class="hero wrap th" id="theater">
  <div class="th-stage">
   <div class="th-front">
@@ -113,11 +192,13 @@ html.thon .th-band a{color:#FAF3E2}
   <figcaption><span class="pen">1979년 봄, 작은 예식장 · 같은 날, 영화 속 장면</span><span class="n">모두 가상 인물로 만든 샘플 장면이에요.</span></figcaption>
 </figure>
 
+<section class="scw" data-fx="flap" style="--h:260vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s03.jpg" alt="" loading="lazy"><div class="scp scp-board"><p class="lab">상영 시간표</p><ol class="flap"><li><b>S#1</b><span>빨간 구두의 등굣길</span></li><li><b>S#2</b><span>처음 만난 날</span></li><li><b>S#3</b><span>결혼식 날</span></li><li><b>S#4</b><span>결혼사진이 움직이는 순간</span></li><li><b>S#5</b><span>미싱 옆에서 노는 아이들</span></li><li><b>S#6</b><span>현관의 신발들</span></li><li><b>S#7</b><span>그 시절의 나에게 손 흔들기</span></li><li><b>S#8</b><span>마지막 가족 장면</span></li></ol><p class="sm">앨범에 남은 사진은 그대로 살리고, 사진이 없는 시절은 들은 이야기로 장면을 그려서 한 편으로 이어요. 잔치 날 식당 TV에서 바로 틀 수 있는 파일로 드려요.</p></div></div></section>
 <section class="story wrap">
   <p class="big">빨간 구두의 등굣길, 처음 만난 날, 결혼식 날, 결혼사진이 움직이는 순간, 미싱 옆에서 노는 아이들, 현관의 신발들, 그 시절의 나에게 손 흔들기, 마지막 가족 장면.</p>
   <p class="small">앨범에 남은 사진은 그대로 살리고, 사진이 없는 시절은 들은 이야기로 장면을 그려서 한 편으로 이어요. 잔치 날 식당 TV에서 바로 틀 수 있는 파일로 드려요.</p>
 </section>
 
+<section class="scw" data-fx="doors" style="--h:220vh" aria-hidden="true"><div class="scs lt"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s04.jpg" alt="" loading="lazy"><div class="scp scp-top"><p class="h">사진 영상, AI 애니메이션, 그리고 오래오래</p><div class="doors"><div><b>1관</b><span class="t">사진 넘김 영상</span><span>3~8분 · 9만~20만원 안팎</span></div><div><b>2관</b><span class="t">짧은 AI 애니메이션</span><span>30초~2분 30초 · 13만~170만원</span></div><div><b>3관</b><span class="t">오래오래 영화사</span><span>약 4~5분 · 49만원</span></div></div></div></div></section>
 <section class="why wrap" id="why">
   <h2>사진 영상, AI 애니메이션, 그리고 오래오래</h2>
   <p class="wi">칠순·부모님 영상 상품 20여 곳을 직접 살펴보고 정리했어요. (2026년 10월)</p>
@@ -136,6 +217,7 @@ html.thon .th-band a{color:#FAF3E2}
   <p class="wa">샘플 「순희」 4분 42초는 55개 구간으로 나누고, 음악 다섯 곡으로 감정의 높낮이를 이었어요.</p>
 </section>
 
+<section class="scw" data-fx="type" style="--h:230vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s05.jpg" alt="" loading="lazy"><div class="scp scp-right"><p class="h">글 쓰는 아내가 시나리오를 쓰고, 영화를 전공한 남편이 장면을 나누고 이어요.</p><div class="paper"><p><b>S#1. 마을 길, 아침</b><span>빨간 구두에 빨간 가방을 메고 아버지 손을 꼭 잡고 학교 가던 길.</span><em>설렘</em></p><p><b>S#3. 작은 예식장, 1979년 봄</b><span>평생 함께 걸어갈 사람의 팔짱을 끼던 날.</span><em>약속</em></p><p><b>S#5. 현관</b><span>내 구두는 닳아 가도 아이들 신발은 늘 새것이었습니다.</span><em>말하지 않은 희생</em></p></div></div></div></section>
 <section class="script wrap" id="script">
   <h2>시나리오 한 장</h2>
   <div class="page">
@@ -150,6 +232,7 @@ html.thon .th-band a{color:#FAF3E2}
   <p class="note">샘플 「순희」에 실제로 들어간 자막과, 장면마다 적어 둔 감정 메모예요. 모두 가상 인물이에요.</p>
 </section>
 
+<section class="scw" data-fx="dim" style="--h:170vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s06.jpg" alt="" loading="lazy"><div class="scp scp-screen"><p class="lab">샘플 상영작</p><p class="h">「순희」 우리 엄마 한순희의 일흔 해</p><p class="sm">약 4분 42초 · 칠순 잔치 상영용 · 아래에서 바로 재생돼요</p></div></div></section>
 <section class="sample wrap" id="sample">
   <div class="head"><p class="t">「순희」 우리 엄마 한순희의 일흔 해</p><p class="m">약 4분 42초 · 칠순 잔치 상영용</p></div>
   <div class="tv"><div style="aspect-ratio:16/9"><iframe src="https://www.youtube-nocookie.com/embed/4B3-ItvQCCA?autoplay=1" srcdoc="&lt;style&gt;*{margin:0;padding:0}html,body{height:100%;overflow:hidden;background:#1C1B19}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover;display:block}span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#1C1B19;color:#fff;font:600 17px/1 Pretendard,system-ui,sans-serif;padding:16px 24px}a:hover span{background:#B5321F}&lt;/style&gt;&lt;a href=&quot;https://www.youtube-nocookie.com/embed/4B3-ItvQCCA?autoplay=1&quot;&gt;&lt;img src=&quot;https://oraeoraefilm.com/media/poster-800.webp&quot; alt=&quot;샘플 상영작 「순희」 포스터&quot;&gt;&lt;span&gt;재생 · 4분 42초&lt;/span&gt;&lt;/a&gt;" title="샘플 상영작 「순희」" style="width:100%;height:100%;border:0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -158,6 +241,7 @@ html.thon .th-band a{color:#FAF3E2}
   
 </section>
 
+<section class="scw" data-fx="strip" style="--h:250vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s07.jpg" alt="" loading="lazy"><div class="scp scp-strip"><div class="strip"><figure><img src="https://oraeoraefilm.com/media/scene_1_shoes-800.webp" alt=""><figcaption>빨간 구두의 등굣길</figcaption></figure><figure><img src="https://oraeoraefilm.com/media/scene_2_meet-800.webp" alt=""><figcaption>처음 만난 날</figcaption></figure><figure><img src="https://oraeoraefilm.com/media/scene_5_sewing-800.webp" alt=""><figcaption>미싱 옆에서 노는 아이들</figcaption></figure><figure><img src="https://oraeoraefilm.com/media/scene_7_wave-800.webp" alt=""><figcaption>그 시절의 나에게 손 흔들기</figcaption></figure></div></div></div></section>
 <section class="pile wrap" id="scenes" aria-label="장면 보기">
   <figure class="print f1"><img width="1344" height="752" src="media/scene_1_shoes.webp" srcset="media/scene_1_shoes-800.webp 800w, media/scene_1_shoes.webp 1344w" sizes="(max-width:820px) 100vw, 50vw" alt="빨간 구두를 신고 아버지 손을 잡고 학교 가는 아이" loading="lazy"><figcaption class="pen">빨간 구두의 등굣길</figcaption></figure>
   <figure class="print f2"><img width="1344" height="752" src="media/scene_2_meet.webp" srcset="media/scene_2_meet-800.webp 800w, media/scene_2_meet.webp 1344w" sizes="(max-width:820px) 100vw, 50vw" alt="낙엽 길에서 처음 만난 두 사람" loading="lazy"><figcaption class="pen">처음 만난 날</figcaption></figure>
@@ -165,6 +249,7 @@ html.thon .th-band a{color:#FAF3E2}
   <figure class="print f4"><img width="1344" height="752" src="media/scene_7_wave.webp" srcset="media/scene_7_wave-800.webp 800w, media/scene_7_wave.webp 1344w" sizes="(max-width:820px) 100vw, 50vw" alt="차밭 언덕에서 손 흔드는 어린 시절의 주인공" loading="lazy"><figcaption class="pen">그 시절의 나에게 손 흔들기</figcaption></figure>
 </section>
 
+<section class="scw" data-fx="wipe" style="--h:230vh" aria-hidden="true"><div class="scs lt"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s08.jpg" alt="" loading="lazy"><div class="scp scp-right"><p class="h">앨범 사진 한 장이 장면이 되기까지</p><div class="wipe"><img src="https://oraeoraefilm.com/media/album_photo_1979.webp" alt=""><img class="w2" src="https://oraeoraefilm.com/media/album_scene_1979.webp" alt=""></div><p class="sm">실제 사진 속 얼굴은 새로 그리지 않아요. 원본은 그대로 두고 표정이나 머리카락만 아주 살짝 움직이게 해요.</p></div></div></section>
 <section class="compare wrap">
   <div class="pair">
     <figure class="print a"><span class="ph"><img width="648" height="730" src="media/album_photo_1979.webp" srcset="media/album_photo_1979-400.webp 400w, media/album_photo_1979.webp 648w" sizes="(max-width:820px) 100vw, 50vw" alt="가상의 1979년 결혼사진"><span class="stamp">79 4 15</span></span><figcaption class="pen">1979년 봄, 결혼식 날 (사진)</figcaption></figure>
@@ -180,6 +265,7 @@ html.thon .th-band a{color:#FAF3E2}
 </section>
 
 
+<section class="scw" data-fx="steps" style="--h:250vh" aria-hidden="true"><div class="scs lt"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s09.jpg" alt="" loading="lazy"><div class="scp scp-right"><p class="h">시나리오부터 먼저 보여 드려요</p><ol class="reel"><li>잔치 날짜 알려 주기</li><li>결제하고 사진과 질문지 보내기</li><li>이야기 더 듣기</li><li>시나리오 확인하기</li><li>장면 미리 보기</li><li>완성하고 고치기</li><li>파일 받기</li></ol></div></div></section>
 <section class="steps wrap" id="steps">
   <h2>시나리오부터 먼저 보여 드려요</h2>
   <ol>
@@ -193,6 +279,7 @@ html.thon .th-band a{color:#FAF3E2}
   </ol>
 </section>
 
+<section class="scw" data-fx="dim" style="--h:170vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s10.jpg" alt="" loading="lazy"><div class="scp scp-booth"><p class="lab">매표소</p><div class="env"><p class="et">인생 영화 한 편</p><p>약 4~5분 · 5일 이내 완성</p><p class="price">490,000원</p><p>잔치 날짜와 주인공 성함만 먼저 알려 주세요. 바로 아래 봉투에 적어 보내시면 돼요.</p></div></div></div></section>
 <section class="order wrap" id="price">
   <div>
     <h2>가격과 문의</h2>
@@ -211,6 +298,7 @@ html.thon .th-band a{color:#FAF3E2}
   </div>
 </section>
 
+<section class="scw" data-fx="memo" style="--h:170vh" aria-hidden="true"><div class="scs lt"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s11.jpg" alt="" loading="lazy"><div class="scp scp-left"><p class="h">주문 전에 많이 물어보세요</p><div class="memos"><p>너무 신파거나 오글거리면 어떡하죠?</p><p>부모님께 비밀로 준비할 수 있나요?</p><p>사진이 몇 장 없어도 되나요?</p></div></div></div></section>
 <section class="faq wrap">
   <h2>주문 전에 많이 물어보세요</h2>
   <dl>
@@ -235,6 +323,7 @@ html.thon .th-band a{color:#FAF3E2}
 
 </main>
 
+<section class="scw" data-fx="roll" style="--h:230vh" aria-hidden="true"><div class="scs"><img class="sca" src="https://labmingyeong-gif.github.io/aeterni-preview/oraeorae/storyboard/img/s12.jpg" alt="" loading="lazy"><div class="scp scp-credits"><div class="credits"><p><span>상영작</span>부모님 인생 한 편</p><p><span>각본</span>글 쓰는 아내</p><p><span>연출</span>영화를 전공한 남편</p><p><span>사진</span>받은 사진은 작업이 끝나고 30일 뒤에 지워요.</p><p><span>예매</span>hello@oraeoraefilm.com</p><p class="end">오래오래 영화사</p></div></div></div></section>
 <footer>
   <p class="nm">오래오래 영화사</p>
   <p>주소 서울 광진구 긴고랑로23길 20-12 · 이메일 <a href="mailto:hello@oraeoraefilm.com" onclick="if(window.gtag)gtag('event','contact_click',{method:'mail'})">hello@oraeoraefilm.com</a></p>
@@ -258,6 +347,24 @@ sc.style.left=L(P.x,F.x,g)+'px';sc.style.top=L(P.y,F.y,g)+'px';sc.style.width=L(
 tc.textContent=('0'+Math.floor(t/60)).slice(-2)+':'+('0'+t%60).slice(-2);po.style.visibility=so>=1?'hidden':'visible';tc.style.opacity=seg(p,.26,.34);}
 addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
 addEventListener('resize',measure);addEventListener('load',measure);if(document.fonts)document.fonts.ready.then(measure);measure();
+})();
+</script>
+<script>
+(function(){if(!document.documentElement.classList.contains('thon'))return;
+var W=[].slice.call(document.querySelectorAll('.scw'));
+function cl(v){return v<0?0:v>1?1:v}function seg(p,a,b){return cl((p-a)/(b-a))}
+function upd(){W.forEach(function(w){var r=w.getBoundingClientRect();if(r.bottom<-50||r.top>innerHeight+50)return;
+var p=cl(-r.top/(w.offsetHeight-innerHeight)),s=w.firstElementChild,fx=w.dataset.fx;s.style.setProperty('--p',p.toFixed(3));s.style.setProperty('--po',seg(p,.08,.25).toFixed(3));
+if(fx==='light'){s.style.setProperty('--lp',seg(p,0,.55).toFixed(3));s.style.setProperty('--tl',seg(p,.35,.65).toFixed(3));}
+if(fx==='flap'){var li=s.querySelectorAll('.flap li'),n=Math.round(seg(p,.2,.8)*li.length);li.forEach(function(x,i){x.classList.toggle('on',i<n)})}
+if(fx==='doors'){var d=s.querySelectorAll('.doors div'),n2=Math.round(seg(p,.2,.75)*d.length);d.forEach(function(x,i){x.classList.toggle('on',i<n2)})}
+if(fx==='type'){var t=s.querySelectorAll('.paper p'),n3=Math.round(seg(p,.2,.8)*t.length);t.forEach(function(x,i){x.classList.toggle('on',i<n3)})}
+if(fx==='wipe'){s.style.setProperty('--wp',seg(p,.25,.8).toFixed(3))}
+if(fx==='steps'){var st=s.querySelectorAll('.reel li'),k=Math.min(st.length-1,Math.floor(seg(p,.15,.9)*st.length));st.forEach(function(x,i){x.classList.toggle('on',i===k)})}
+if(fx==='memo'){s.style.setProperty('--mo',seg(p,.2,.5).toFixed(3));s.querySelectorAll('.memos p').forEach(function(x,i){x.style.setProperty('--i',i)})}
+if(fx==='roll'){s.style.setProperty('--cr',seg(p,.05,.95).toFixed(3))}
+})}
+var tk=false;addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd()})}},{passive:true});addEventListener('resize',upd);upd();
 })();
 </script>
 </body>
